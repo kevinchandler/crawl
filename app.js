@@ -4,10 +4,10 @@ var url = require('url'),
 	Website = require('./db/schema/website.js');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/websites');
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/websites');
 
 var c = new Crawler({
-    maxConnections : 100,
+    maxConnections : 10,
     callback : function (error, result, $) {
       
         try {
@@ -51,5 +51,5 @@ var c = new Crawler({
     }
 });
 
-c.queue('http://www.alexa.com/topsites');
+c.queue(process.argv[2] || 'http://www.alexa.com/topsites');
 
