@@ -1,6 +1,5 @@
 
 var url = require('url'),
-	request = require('request'),
 	Crawler = require('crawler'),
 	Website = require('./db/schema/website.js');
 
