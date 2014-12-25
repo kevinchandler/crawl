@@ -1,0 +1,17 @@
+{
+  "name": "crawl",
+  "version": "0.0.0",
+  "description": "Crawl the interwebs for unique urls and save them to mongodb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Chandler",
+  "license": "ISC",
+  "dependencies": {
+    "crawler": "^0.4.1",
+    "mongodb": "^1.4.26",
+    "mongoose": "^3.8.21",
+    "request": "^2.51.0"
+  }
+}
